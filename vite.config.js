@@ -37,6 +37,23 @@ function devFacebookResolverPlugin() {
             const targetUrl = trimmed.startsWith('http://') || trimmed.startsWith('https://')
               ? trimmed
               : `https://${trimmed}`;
+            const parsedTarget = new URL(targetUrl);
+            const host = parsedTarget.hostname.toLowerCase();
+            const isFacebookHost =
+              host === 'facebook.com' ||
+              host.endsWith('.facebook.com') ||
+              host === 'fb.watch' ||
+              host.endsWith('.fb.watch') ||
+              host === 'fb.com' ||
+              host.endsWith('.fb.com');
+
+            if (!isFacebookHost) {
+              res.statusCode = 400;
+              res.setHeader('Content-Type', 'application/json');
+              res.end(JSON.stringify({ error: 'Invalid URL. Only Facebook links can be resolved.' }));
+              return;
+            }
+
             const resp = await fetch(targetUrl, {
               method: 'GET',
               redirect: 'manual'

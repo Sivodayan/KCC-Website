@@ -40,8 +40,6 @@ function getSecretToken(context) {
     'GitHub_Token',
     'GH_TOKEN',
     'gh_token',
-    'VITE_GITHUB_TOKEN',
-    'vite_github_token',
     'GIT_TOKEN',
     'GITHUB_PAT',
     'TOKEN'
@@ -98,33 +96,6 @@ function getSecretToken(context) {
   return '';
 }
 
-/**
- * Inspects all available environment bindings without leaking secret values.
- */
-function inspectEnvironment(context) {
-  const env = context?.env || {};
-  const keys = new Set();
-
-  for (const k in env) keys.add(k);
-  try {
-    for (const k of Object.getOwnPropertyNames(env)) keys.add(k);
-  } catch {}
-
-  try {
-    const proto = Object.getPrototypeOf(env);
-    if (proto && proto !== Object.prototype) {
-      for (const k of Object.getOwnPropertyNames(proto)) {
-        if (k !== 'constructor') keys.add(k);
-      }
-    }
-  } catch {}
-
-  const safeKeys = Array.from(keys).filter(k => k !== 'ASSETS');
-  return {
-    totalKeys: safeKeys.length,
-    keysFound: safeKeys
-  };
-}
 
 /**
  * Handle OPTIONS for preflight requests
@@ -147,16 +118,13 @@ export async function onRequestOptions() {
 export async function onRequestGet(context) {
   const token = getSecretToken(context);
   const isConfigured = Boolean(token);
-  const envInfo = inspectEnvironment(context);
 
   return new Response(
     JSON.stringify({
       configured: isConfigured,
-      targetRepo: 'YOUR_USERNAME/KCC-Project',
+      targetRepo: 'Sivodayan/KCC-Web-Public',
       branch: 'main',
       hasToken: isConfigured,
-      totalKeys: envInfo.totalKeys,
-      bindingsFound: envInfo.keysFound,
       checkedAt: new Date().toISOString()
     }),
     {
@@ -211,8 +179,8 @@ export async function onRequestPost(context) {
   }
 
   const {
-    owner = 'YOUR_USERNAME',
-    repo = 'KCC-Project',
+    owner = 'Sivodayan',
+    repo = 'KCC-Web-Public',
     path = 'src/data/siteContent.json',
     branch = 'main',
     contentString,
@@ -233,7 +201,7 @@ export async function onRequestPost(context) {
   }
 
   // Security whitelist: Restrict commits to designated repository and content directory
-  if (owner !== 'YOUR_USERNAME' || repo !== 'KCC-Project') {
+  if (owner !== 'Sivodayan' || repo !== 'KCC-Web-Public') {
     return new Response(
       JSON.stringify({ error: 'Unauthorized repository target.' }),
       {

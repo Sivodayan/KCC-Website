@@ -137,8 +137,8 @@ export async function fetchFileFromGitHub({ owner, repo, path, branch = 'main', 
  * Automatically resolves the latest blob SHA to prevent race condition write conflicts.
  *
  * @param {Object} params
- * @param {string} [params.owner='YOUR_USERNAME'] - Repository owner.
- * @param {string} [params.repo='KCC-Project'] - Repository name.
+ * @param {string} [params.owner='Sivodayan'] - Repository owner.
+ * @param {string} [params.repo='KCC-Web-Public'] - Repository name.
  * @param {string} [params.path='src/data/siteContent.json'] - Target file path.
  * @param {string} [params.branch='main'] - Target branch.
  * @param {string} params.token - GitHub PAT with repo scope.
@@ -206,8 +206,8 @@ export async function checkGitHubProxyStatus() {
  * Falls back to direct client-side commit for local development if a local token is present.
  *
  * @param {Object} params
- * @param {string} [params.owner='YOUR_USERNAME'] - Repository owner.
- * @param {string} [params.repo='KCC-Project'] - Repository name.
+ * @param {string} [params.owner='Sivodayan'] - Repository owner.
+ * @param {string} [params.repo='KCC-Web-Public'] - Repository name.
  * @param {string} [params.path='src/data/siteContent.json'] - Target file path.
  * @param {string} [params.branch='main'] - Target branch.
  * @param {string} [params.token] - Optional local PAT for local dev fallback.
@@ -216,8 +216,8 @@ export async function checkGitHubProxyStatus() {
  * @returns {Promise<{success: boolean, commitSha: string, fullSha: string, commitUrl: string, branch: string, timestamp: string}>}
  */
 export async function commitFileToGitHub({
-  owner = 'YOUR_USERNAME',
-  repo = 'KCC-Project',
+  owner = 'Sivodayan',
+  repo = 'KCC-Web-Public',
   path = 'src/data/siteContent.json',
   branch = 'main',
   token,
@@ -227,12 +227,7 @@ export async function commitFileToGitHub({
   const msg = commitMessage?.trim() || `Update website content via KCC Admin Panel [${new Date().toISOString()}]`;
 
   // 1. Primary path: Use Cloudflare Pages Function server-side proxy (/api/github)
-  const cleanToken = (
-    token ||
-    import.meta.env.VITE_GITHUB_TOKEN ||
-    import.meta.env.GITHUB_TOKEN ||
-    ''
-  ).trim();
+  const cleanToken = (token || '').trim();
 
   // 1. Primary path: Use Cloudflare Worker / Pages proxy (/api/github)
   try {

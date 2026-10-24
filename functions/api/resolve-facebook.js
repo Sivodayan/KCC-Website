@@ -62,7 +62,15 @@ export async function onRequestGet(context) {
     const host = parsedTarget.hostname.toLowerCase();
 
     // Security check: only resolve Facebook domain URLs
-    if (!host.endsWith('facebook.com') && !host.endsWith('fb.watch') && !host.endsWith('fb.com')) {
+    const isFacebookHost =
+      host === 'facebook.com' ||
+      host.endsWith('.facebook.com') ||
+      host === 'fb.watch' ||
+      host.endsWith('.fb.watch') ||
+      host === 'fb.com' ||
+      host.endsWith('.fb.com');
+
+    if (!isFacebookHost) {
       return new Response(JSON.stringify({ error: 'Invalid URL. Only Facebook links can be resolved.' }), {
         status: 400,
         headers: {
