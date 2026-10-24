@@ -1,0 +1,23 @@
+# Robots.txt for J/Kopay Christian College (யா/ கோப்பாய் கிறிஸ்தவ கல்லூரி)
+# Official portal: https://jkcc.edu.lk
+
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api/
+
+# Googlebot specific directives
+User-agent: Googlebot
+Allow: /
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api/
+
+# Allow Google Image search indexing for campus imagery & archives
+User-agent: Googlebot-Image
+Allow: /assets/
+Allow: /
+
+# Official XML Sitemap location for Google Search Console
+Sitemap: https://jkcc.edu.lk/sitemap.xml

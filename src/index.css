@@ -1,0 +1,1156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Scroll offset for sticky header */
+:root {
+  --nav-height: 4.8rem;
+}
+
+html {
+  scroll-padding-top: var(--nav-height);
+}
+
+/* Scroll Entrance Transition */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered Delay Helpers */
+.stagger-1 {
+  transition-delay: 80ms;
+}
+
+.stagger-2 {
+  transition-delay: 160ms;
+}
+
+.stagger-3 {
+  transition-delay: 240ms;
+}
+
+.stagger-4 {
+  transition-delay: 320ms;
+}
+
+/* Accessibility: Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal-item {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* Navbar Link Hover Indicator */
+.nav-link {
+  position: relative;
+  transition: color 200ms ease, background-color 200ms ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #196716;
+  border-radius: 9999px;
+  transition: width 220ms ease, left 220ms ease;
+}
+
+.nav-link:hover::after,
+.nav-link.is-active::after {
+  width: 80%;
+  left: 10%;
+}
+
+/* 3D Digital Journal Carousel (Pinterest Inspired) */
+.journal-stage {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+.journal-card {
+  position: absolute;
+  width: min(520px, 86vw);
+  height: 330px;
+  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.45s ease, filter 0.45s ease;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+@media (max-width: 639px) {
+  .journal-card {
+    height: 270px;
+    width: min(440px, 88vw);
+  }
+}
+
+.journal-card .journal-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1.5rem;
+  transition: transform 0.65s cubic-bezier(0.2, 0.8, 0.2, 1);
+  will-change: transform;
+}
+
+.journal-card.is-active-center {
+  cursor: default;
+}
+
+/* Universal Hover to Zoom Effect for Center, Next, and Previous Images */
+.journal-card:hover .journal-img,
+.journal-card.is-hover-zoomed .journal-img {
+  transform: scale(1.10);
+}
+
+.journal-card.is-nav-prev,
+.journal-card.is-nav-next {
+  cursor: pointer;
+}
+
+.journal-card.is-nav-prev:hover,
+.journal-card.is-nav-next:hover,
+.journal-card.is-nav-prev.is-hover-zoomed,
+.journal-card.is-nav-next.is-hover-zoomed {
+  z-index: 35 !important;
+  filter: brightness(1.08) drop-shadow(0 25px 35px rgba(0, 0, 0, 0.65)) !important;
+}
+
+/* Dramatic 3D Fan-In Entry Transition for Gallery Cards */
+.journal-card.is-entering {
+  transition: transform 1.1s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.95s ease, filter 0.95s ease !important;
+}
+
+@media (min-width: 640px) {
+  .journal-card {
+    height: 410px;
+    width: 580px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .journal-card {
+    height: 470px;
+    width: 660px;
+  }
+}
+
+/* History Content Fade In */
+.fade-content {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 3D Flip Card Interactive System (Flicker-Free, Mobile & Desktop Optimized) */
+.flip-card {
+  perspective: 1200px;
+  -webkit-perspective: 1200px;
+  -webkit-tap-highlight-color: transparent;
+  transform: translateZ(0);
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transition: transform 0.65s cubic-bezier(0.25, 0.8, 0.25, 1);
+  will-change: transform;
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -webkit-font-smoothing: antialiased;
+}
+
+.flip-card-front {
+  transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+
+/* Click/Tap Toggle State (Essential for Mobile touch screens) */
+.flip-card.is-flipped .flip-card-inner {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+}
+
+/* Desktop Hover Support (Smooth, No pointer-events toggle or z-index flash) */
+@media (hover: hover) and (pointer: fine) {
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+  }
+}
+
+/* Hero Entrance Animations */
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-1 {
+  animation: heroFadeUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-hero-2 {
+  opacity: 0;
+  animation: heroFadeUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.12s forwards;
+}
+
+.animate-hero-3 {
+  opacity: 0;
+  animation: heroFadeUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.24s forwards;
+}
+
+/* Hero background campus photo - feathered left edge so no physical image cut is ever visible on desktop */
+@media (min-width: 640px) {
+  .hero-bg-photo {
+    -webkit-mask-image: linear-gradient(to right,
+        transparent 0%,
+        transparent 15%,
+        rgba(0, 0, 0, 0.5) 30%,
+        black 48%,
+        black 100%);
+    mask-image: linear-gradient(to right,
+        transparent 0%,
+        transparent 15%,
+        rgba(0, 0, 0, 0.5) 30%,
+        black 48%,
+        black 100%);
+  }
+}
+
+/* Hero Cinematic Multi-Stop Gradients & Scrims (Flawless optical easing curve) */
+.hero-scrim-desktop {
+  background: linear-gradient(90deg,
+      #124817 0%,
+      #124817 18%,
+      rgba(18, 72, 23, 0.985) 20%,
+      rgba(18, 72, 23, 0.95) 26%,
+      rgba(18, 72, 23, 0.89) 30%,
+      rgba(18, 72, 23, 0.80) 34%,
+      rgba(18, 72, 23, 0.68) 38%,
+      rgba(18, 72, 23, 0.54) 42%,
+      rgba(18, 72, 23, 0.39) 46%,
+      rgba(18, 72, 23, 0.25) 50%,
+      rgba(18, 72, 23, 0.13) 54%,
+      rgba(18, 72, 23, 0.05) 57%,
+      rgba(18, 72, 23, 0.015) 60%,
+      rgba(18, 72, 23, 0) 63%);
+}
+
+html.dark .hero-scrim-desktop {
+  background: linear-gradient(90deg,
+      #071309 0%,
+      #071309 18%,
+      rgba(7, 19, 9, 0.985) 22%,
+      rgba(7, 19, 9, 0.95) 26%,
+      rgba(7, 19, 9, 0.89) 30%,
+      rgba(7, 19, 9, 0.80) 34%,
+      rgba(7, 19, 9, 0.68) 38%,
+      rgba(7, 19, 9, 0.54) 42%,
+      rgba(7, 19, 9, 0.39) 46%,
+      rgba(7, 19, 9, 0.25) 50%,
+      rgba(7, 19, 9, 0.13) 54%,
+      rgba(7, 19, 9, 0.05) 57%,
+      rgba(7, 19, 9, 0.015) 60%,
+      rgba(7, 19, 9, 0) 63%);
+}
+
+.hero-scrim-mobile {
+  background: linear-gradient(180deg,
+      rgba(18, 72, 23, 0.76) 0%,
+      rgba(18, 72, 23, 0.55) 30%,
+      rgba(18, 72, 23, 0.28) 55%,
+      rgba(18, 72, 23, 0.08) 75%,
+      rgba(18, 72, 23, 0) 95%);
+}
+
+html.dark .hero-scrim-mobile {
+  background: linear-gradient(180deg,
+      rgba(7, 19, 9, 0.78) 0%,
+      rgba(7, 19, 9, 0.58) 30%,
+      rgba(7, 19, 9, 0.30) 55%,
+      rgba(7, 19, 9, 0.10) 75%,
+      rgba(7, 19, 9, 0) 95%);
+}
+
+/* Atmospheric Ambient Vignette & Warm Tint - Zero hard edges */
+.hero-ambient-vignette {
+  background: radial-gradient(circle at 20% 40%,
+      rgba(74, 222, 128, 0.08) 0%,
+      rgba(74, 222, 128, 0.04) 30%,
+      rgba(74, 222, 128, 0.01) 50%,
+      rgba(74, 222, 128, 0) 70%),
+    linear-gradient(to top,
+      rgba(5, 20, 7, 0.6) 0%,
+      rgba(5, 20, 7, 0.2) 25%,
+      rgba(5, 20, 7, 0.04) 45%,
+      rgba(5, 20, 7, 0) 65%);
+}
+
+html.dark .hero-ambient-vignette {
+  background: radial-gradient(circle at 20% 40%,
+      rgba(74, 222, 128, 0.06) 0%,
+      rgba(74, 222, 128, 0.03) 30%,
+      rgba(74, 222, 128, 0.01) 50%,
+      rgba(74, 222, 128, 0) 70%),
+    linear-gradient(to top,
+      rgba(2, 8, 3, 0.75) 0%,
+      rgba(2, 8, 3, 0.25) 25%,
+      rgba(2, 8, 3, 0.05) 45%,
+      rgba(2, 8, 3, 0) 65%);
+}
+
+/* Modal Entrance Animations */
+@keyframes modalBackdropFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalContentPopIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-modal-backdrop {
+  animation: modalBackdropFadeIn 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-modal-content {
+  animation: modalContentPopIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Gallery Caption Animation */
+@keyframes captionFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-caption {
+  animation: captionFadeUp 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ==========================================================================
+   Instagram-Style Glassmorphism Loading Placeholders & Swiping Shimmer
+   ========================================================================== */
+
+/* Continuous, rhythmic Instagram shimmer swipe across elements */
+@keyframes instaGlassSwipe {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+
+  100% {
+    transform: translateX(150%) skewX(-20deg);
+  }
+}
+
+/* Diagonal glass beam swipe for larger card containers */
+@keyframes instaDiagonalSwipe {
+  0% {
+    transform: translateX(-150%) skewX(-25deg);
+  }
+
+  100% {
+    transform: translateX(150%) skewX(-25deg);
+  }
+}
+
+@keyframes glassPulseGlow {
+
+  0%,
+  100% {
+    opacity: 0.75;
+    filter: drop-shadow(0 0 10px rgba(88, 143, 84, 0.2));
+  }
+
+  50% {
+    opacity: 1;
+    filter: drop-shadow(0 0 22px rgba(88, 143, 84, 0.4));
+  }
+}
+
+@keyframes glassRouteProgress {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  50% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* ==========================================================================
+   Professional Search Modal Indeterminate Progress Beam & Shimmer
+   ========================================================================== */
+
+@keyframes indeterminateProgress {
+  0% {
+    left: -35%;
+    right: 100%;
+  }
+  60% {
+    left: 100%;
+    right: -90%;
+  }
+  100% {
+    left: 100%;
+    right: -90%;
+  }
+}
+
+@keyframes indeterminateProgressShort {
+  0% {
+    left: -200%;
+    right: 100%;
+  }
+  60% {
+    left: 107%;
+    right: -8%;
+  }
+  100% {
+    left: 107%;
+    right: -8%;
+  }
+}
+
+.search-progress-track {
+  position: relative;
+  height: 2px;
+  width: 100%;
+  background-color: rgba(22, 101, 52, 0.08);
+  overflow: hidden;
+}
+
+html.dark .search-progress-track {
+  background-color: rgba(74, 222, 128, 0.1);
+}
+
+.search-progress-bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(21, 128, 61, 0.8) 0%,
+    rgba(16, 185, 129, 1) 50%,
+    rgba(217, 119, 6, 0.9) 100%
+  );
+  border-radius: 9999px;
+  animation: indeterminateProgress 1.6s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+}
+
+.search-progress-bar-secondary {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(16, 185, 129, 0.5) 0%,
+    rgba(52, 211, 153, 0.95) 100%
+  );
+  border-radius: 9999px;
+  animation: indeterminateProgressShort 1.6s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+  animation-delay: 0.85s;
+}
+
+/* Glassy container with frosted blur, subtle border & inner specular gradient */
+.glass-surface {
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.82) 0%,
+      rgba(240, 249, 239, 0.52) 50%,
+      rgba(229, 245, 227, 0.72) 100%);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow:
+    0 8px 32px -4px rgba(25, 103, 22, 0.08),
+    inset 0 1px 2px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1px 1px 0 rgba(25, 103, 22, 0.05);
+}
+
+/* Institutional dark mode frosted glass */
+html.dark .glass-surface {
+  background: linear-gradient(135deg,
+      rgba(17, 30, 20, 0.85) 0%,
+      rgba(12, 22, 14, 0.92) 50%,
+      rgba(8, 16, 10, 0.98) 100%) !important;
+  backdrop-filter: blur(16px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(160%) !important;
+  border: 1px solid rgba(74, 222, 128, 0.18) !important;
+  box-shadow:
+    0 10px 35px -5px rgba(0, 0, 0, 0.7),
+    inset 0 1px 2px 0 rgba(74, 222, 128, 0.15),
+    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Dark variant for Hero or dark containers */
+.glass-surface-dark {
+  background: linear-gradient(135deg,
+      rgba(19, 82, 17, 0.7) 0%,
+      rgba(15, 60, 14, 0.88) 50%,
+      rgba(9, 38, 8, 0.95) 100%);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  border: 1px solid rgba(197, 225, 193, 0.35);
+  box-shadow:
+    0 12px 40px -8px rgba(0, 0, 0, 0.5),
+    inset 0 1px 2px 0 rgba(255, 255, 255, 0.3),
+    inset 0 -1px 1px 0 rgba(0, 0, 0, 0.4);
+}
+
+html.dark .glass-surface-dark {
+  background: linear-gradient(135deg,
+      rgba(10, 25, 14, 0.85) 0%,
+      rgba(6, 18, 9, 0.94) 50%,
+      rgba(4, 12, 6, 0.98) 100%) !important;
+  border-color: rgba(74, 222, 128, 0.22) !important;
+}
+
+/* Emerald tinted glass for school accent */
+.glass-surface-emerald {
+  background: linear-gradient(135deg,
+      rgba(233, 248, 231, 0.88) 0%,
+      rgba(197, 225, 193, 0.58) 50%,
+      rgba(145, 189, 141, 0.4) 100%);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border: 1px solid rgba(197, 225, 193, 0.7);
+  box-shadow:
+    0 8px 32px -4px rgba(25, 103, 22, 0.12),
+    inset 0 1px 2px 0 rgba(255, 255, 255, 0.95);
+}
+
+html.dark .glass-surface-emerald {
+  background: linear-gradient(135deg,
+      rgba(20, 52, 26, 0.78) 0%,
+      rgba(14, 38, 18, 0.88) 50%,
+      rgba(9, 26, 12, 0.95) 100%) !important;
+  border: 1px solid rgba(74, 222, 128, 0.3) !important;
+  box-shadow:
+    0 10px 35px -5px rgba(0, 0, 0, 0.75),
+    inset 0 1px 2px 0 rgba(74, 222, 128, 0.22) !important;
+}
+
+/* Instagram-Style Active Swiping Light Wave (Light Frosted Surface) */
+.glass-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-shimmer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.25) 20%,
+      rgba(255, 255, 255, 0.85) 50%,
+      rgba(255, 255, 255, 0.25) 80%,
+      rgba(255, 255, 255, 0) 100%);
+  animation: instaGlassSwipe 1.4s infinite cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  z-index: 10;
+}
+
+html.dark .glass-shimmer::after {
+  background: linear-gradient(90deg,
+      rgba(74, 222, 128, 0) 0%,
+      rgba(74, 222, 128, 0.08) 25%,
+      rgba(74, 222, 128, 0.28) 50%,
+      rgba(74, 222, 128, 0.08) 75%,
+      rgba(74, 222, 128, 0) 100%) !important;
+}
+
+/* Instagram-Style Active Swiping Light Wave (Dark Surfaces) */
+.glass-shimmer-dark {
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-shimmer-dark::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.08) 20%,
+      rgba(255, 255, 255, 0.45) 50%,
+      rgba(255, 255, 255, 0.08) 80%,
+      rgba(255, 255, 255, 0) 100%);
+  animation: instaGlassSwipe 1.4s infinite cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  z-index: 10;
+}
+
+html.dark .glass-shimmer-dark::after {
+  background: linear-gradient(90deg,
+      rgba(74, 222, 128, 0) 0%,
+      rgba(74, 222, 128, 0.06) 20%,
+      rgba(74, 222, 128, 0.3) 50%,
+      rgba(74, 222, 128, 0.06) 80%,
+      rgba(74, 222, 128, 0) 100%) !important;
+}
+
+/* Diagonal glass beam swipe for larger card containers */
+.glass-swipe-diagonal {
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-swipe-diagonal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.08) 25%,
+      rgba(255, 255, 255, 0.7) 50%,
+      rgba(255, 255, 255, 0.08) 75%,
+      transparent 100%);
+  animation: instaDiagonalSwipe 1.4s infinite cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+  z-index: 12;
+}
+
+html.dark .glass-swipe-diagonal::before {
+  background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(74, 222, 128, 0.03) 25%,
+      rgba(74, 222, 128, 0.24) 50%,
+      rgba(74, 222, 128, 0.03) 75%,
+      transparent 100%) !important;
+}
+
+/* Subtle breathing glow effect */
+.glass-pulse {
+  animation: glassPulseGlow 3s infinite ease-in-out;
+}
+
+/* Route transition top loader with radiant specular glow */
+.glass-route-bar {
+  background: linear-gradient(90deg, #196716, #3bb537, #86efac, #3bb537, #196716);
+  background-size: 200% 100%;
+  box-shadow: 0 0 14px rgba(74, 222, 128, 0.9), 0 0 6px rgba(25, 103, 22, 0.9);
+  animation: glassRouteProgress 1.4s infinite linear;
+}
+
+/* ==========================================================================
+   Admin Console Mobile Optimizations
+   ========================================================================== */
+
+/* Smooth momentum scrolling for admin tabs on iOS & Android */
+.admin-tabs-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE / Edge */
+}
+
+.admin-tabs-scroll::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera */
+}
+
+/* Responsive Facebook Iframe Post Previews (Prevents mobile overflow) */
+.admin-fb-wrapper {
+  --fb-scale: 0.52;
+  width: 500px;
+  transform: scale(var(--fb-scale));
+  transform-origin: top center;
+  transition: transform 0.2s ease;
+}
+
+@media (min-width: 380px) {
+  .admin-fb-wrapper {
+    --fb-scale: 0.56;
+  }
+}
+
+@media (min-width: 480px) {
+  .admin-fb-wrapper {
+    --fb-scale: 0.62;
+  }
+}
+
+@media (min-width: 640px) {
+  .admin-fb-wrapper {
+    --fb-scale: 0.62;
+  }
+}
+
+/* ==========================================================================
+   KCC Institutional Dark Theme System (Obsidian Emerald Palette)
+   ========================================================================== */
+
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: #080e09 !important;
+  background-image:
+    radial-gradient(at 50% 0%, rgba(25, 103, 22, 0.16) 0%, transparent 65%),
+    radial-gradient(at 100% 100%, rgba(20, 83, 45, 0.08) 0%, transparent 50%) !important;
+  background-attachment: fixed !important;
+  color: #f1f5f9 !important;
+}
+
+/* School crest logo container - clean, high-contrast crisp background without glow */
+.school-crest-badge {
+  border: none !important;
+}
+
+.school-crest-badge,
+html.dark .school-crest-badge,
+html.dark div.school-crest-badge,
+html.dark button .school-crest-badge {
+  background-color: #ffffff !important;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12) !important;
+}
+
+html.dark .school-crest-badge,
+html.dark div.school-crest-badge,
+html.dark button .school-crest-badge {
+  border: 1px solid rgba(74, 222, 128, 0.2) !important;
+}
+
+/* Ensure logo images are not distorted into circles and maintain authentic shield crest height */
+img[src*="logo.png"]:not(.keep-round) {
+  border-radius: 0.5rem !important;
+}
+
+/* Header and Nav Island in Dark Mode */
+html.dark #mainHeader {
+  background-color: rgba(9, 15, 10, 0.92) !important;
+  backdrop-filter: blur(18px) saturate(160%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(160%) !important;
+  border-bottom-color: rgba(74, 222, 128, 0.15) !important;
+}
+
+html.dark #mainHeader .bg-brand-light {
+  background-color: rgba(18, 32, 20, 0.85) !important;
+  border-color: rgba(74, 222, 128, 0.2) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Obsidian Card & Surface Backgrounds */
+html.dark .bg-brand-white,
+html.dark [class*="bg-brand-white"] {
+  background-color: #0f1911 !important;
+}
+
+html.dark .bg-brand-light,
+html.dark [class*="bg-brand-light"]:not([class*="hover:"]):not(.about-dropdown-item) {
+  background-color: #142316 !important;
+}
+
+html.dark .bg-white {
+  background-color: #111e13 !important;
+}
+
+html.dark .bg-slate-50,
+html.dark .bg-slate-100 {
+  background-color: #152217 !important;
+}
+
+/* Glowing Emerald & Subtle Obsidian Borders */
+html.dark .border-brand-pale,
+html.dark [class*="border-brand-pale"] {
+  border-color: rgba(74, 222, 128, 0.18) !important;
+}
+
+html.dark .border-slate-200,
+html.dark .border-slate-100 {
+  border-color: rgba(74, 222, 128, 0.14) !important;
+}
+
+/* High-Contrast Dynamic Typography */
+html.dark .text-slate-900,
+html.dark .text-slate-800 {
+  color: #f8fafc !important;
+}
+
+html.dark .text-slate-700 {
+  color: #e2e8f0 !important;
+}
+
+html.dark .text-slate-600 {
+  color: #cbd5e1 !important;
+}
+
+html.dark .text-slate-500 {
+  color: #94a3b8 !important;
+}
+
+html.dark .text-slate-400 {
+  color: #64748b !important;
+}
+
+/* Luminous Emerald Accent for Dark Mode Headers & Badges */
+html.dark .text-brand-forest {
+  color: #4ade80 !important;
+  text-shadow: 0 0 24px rgba(74, 222, 128, 0.2);
+}
+
+html.dark .text-brand-forestHover {
+  color: #86efac !important;
+}
+
+html.dark .text-brand-sage {
+  color: #86efac !important;
+}
+
+html.dark .hover\:text-brand-forest:hover {
+  color: #4ade80 !important;
+}
+
+html.dark .hover\:text-brand-forestHover:hover {
+  color: #86efac !important;
+}
+
+/* Active Nav Link Underline */
+html.dark .nav-link::after {
+  background-color: #4ade80;
+}
+
+/* Brand Buttons, Pills & Any Opacity Variants */
+html.dark .bg-brand-pale,
+html.dark [class*="bg-brand-pale"] {
+  background-color: rgba(74, 222, 128, 0.18) !important;
+  border-color: rgba(74, 222, 128, 0.25) !important;
+}
+
+html.dark [class*="hover:bg-brand-pale"]:hover,
+html.dark [class*="bg-brand-pale"]:hover {
+  background-color: rgba(74, 222, 128, 0.26) !important;
+}
+
+/* Active Navigation Links & Tabs - Crisp, luminous emerald contrast */
+html.dark .nav-link.is-active,
+html.dark .nav-link[class*="is-active"],
+html.dark [class*="nav-link"][class*="is-active"] {
+  background-color: rgba(74, 222, 128, 0.22) !important;
+  color: #86efac !important;
+  box-shadow: 0 0 14px rgba(74, 222, 128, 0.25) !important;
+  font-weight: 700 !important;
+}
+
+html.dark .nav-link:not(.is-active) {
+  color: #e2e8f0 !important;
+}
+
+html.dark .nav-link:not(.is-active):hover {
+  color: #86efac !important;
+  background-color: rgba(74, 222, 128, 0.14) !important;
+}
+
+/* Blockquotes across History and entire application - high-contrast emerald obsidian glass */
+html.dark blockquote,
+html.dark [class*="blockquote"] {
+  background-color: rgba(18, 36, 21, 0.88) !important;
+  border-left-color: #4ade80 !important;
+  color: #f1f5f9 !important;
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.4) !important;
+}
+
+html.dark blockquote p,
+html.dark blockquote span {
+  color: #f1f5f9 !important;
+}
+
+/* Hero Section in Dark Mode */
+html.dark #about .bg-brand-forest {
+  background: linear-gradient(135deg, #0f3014 0%, #0a1f0e 50%, #07170a 100%) !important;
+  border-color: rgba(74, 222, 128, 0.3) !important;
+  box-shadow: 0 16px 48px -8px rgba(0, 0, 0, 0.75), 0 0 24px rgba(74, 222, 128, 0.12) !important;
+}
+
+/* Contact Banner in Dark Mode */
+html.dark #contact .bg-brand-forest {
+  background: linear-gradient(135deg, #0e2d13 0%, #091e0d 60%, #07170a 100%) !important;
+  border-color: rgba(74, 222, 128, 0.28) !important;
+  box-shadow: 0 12px 36px -6px rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Interactive Flip Cards in Dark Mode */
+html.dark .flip-card-front.bg-brand-forest,
+html.dark .flip-card-back.bg-brand-forest {
+  background: linear-gradient(135deg, #13421b 0%, #0d2812 100%) !important;
+  border-color: rgba(74, 222, 128, 0.3) !important;
+}
+
+html.dark .flip-card-front.bg-brand-white,
+html.dark .flip-card-back.bg-brand-white {
+  background: linear-gradient(135deg, #121f14 0%, #0d170f 100%) !important;
+  color: #f8fafc !important;
+  border-color: rgba(74, 222, 128, 0.22) !important;
+  box-shadow: 0 8px 30px -4px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Performance Metric Tiles in Dark Mode */
+html.dark #performance .bg-brand-light {
+  background: linear-gradient(135deg, #111d13 0%, #0d160f 100%) !important;
+  border-color: rgba(74, 222, 128, 0.2) !important;
+  box-shadow: 0 6px 20px -2px rgba(0, 0, 0, 0.5) !important;
+}
+
+html.dark #performance .bg-brand-light:hover {
+  border-color: rgba(74, 222, 128, 0.45) !important;
+  box-shadow: 0 12px 30px -4px rgba(74, 222, 128, 0.16) !important;
+}
+
+/* 3D Gallery Stage in Dark Mode */
+html.dark .journal-card .journal-img {
+  box-shadow: 0 14px 40px -8px rgba(0, 0, 0, 0.8), 0 0 1px rgba(74, 222, 128, 0.3) !important;
+}
+
+html.dark .journal-card.is-active-center .journal-img {
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.9), 0 0 24px rgba(74, 222, 128, 0.2) !important;
+}
+
+/* Form Controls & Inputs */
+html.dark input:not([type="checkbox"]):not([type="radio"]):not([type="file"]):not(.search-box-input):not(.bg-transparent),
+html.dark textarea,
+html.dark select {
+  background-color: #0b140d !important;
+  color: #f8fafc !important;
+  border-color: rgba(74, 222, 128, 0.26) !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #64748b !important;
+}
+
+html.dark input:not(.search-box-input):not(.bg-transparent):focus,
+html.dark textarea:focus,
+html.dark select:focus {
+  border-color: #4ade80 !important;
+  box-shadow: 0 0 0 2px rgba(74, 222, 128, 0.25) !important;
+}
+
+/* Dark Mode Search Box Container with Rounded Border */
+.search-box-wrapper {
+  border-radius: 1rem;
+}
+
+html.dark .search-box-wrapper {
+  background-color: #0b140d !important;
+  border: 1.5px solid rgba(74, 222, 128, 0.45) !important;
+  border-radius: 1rem !important;
+  box-shadow: 0 0 16px rgba(74, 222, 128, 0.12), inset 0 1px 2px rgba(0, 0, 0, 0.5) !important;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+html.dark .search-box-wrapper:focus-within {
+  border-color: #4ade80 !important;
+  box-shadow: 0 0 0 3px rgba(74, 222, 128, 0.25), 0 0 20px rgba(74, 222, 128, 0.25) !important;
+}
+
+html.dark input.search-box-input,
+html.dark input.bg-transparent {
+  background-color: transparent !important;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+/* Frosted Obsidian Glassmorphism */
+html.dark .glass-surface {
+  background: linear-gradient(135deg,
+      rgba(17, 27, 18, 0.88) 0%,
+      rgba(12, 19, 13, 0.94) 100%) !important;
+  border: 1px solid rgba(74, 222, 128, 0.22) !important;
+  backdrop-filter: blur(16px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(150%) !important;
+  box-shadow:
+    0 8px 32px -4px rgba(0, 0, 0, 0.65),
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
+
+html.dark .glass-surface-emerald {
+  background: linear-gradient(135deg,
+      rgba(21, 48, 23, 0.8) 0%,
+      rgba(13, 31, 15, 0.92) 100%) !important;
+  border: 1px solid rgba(74, 222, 128, 0.28) !important;
+  box-shadow: 0 8px 32px -4px rgba(0, 0, 0, 0.65) !important;
+}
+
+/* About Dropdown Menu - Harmonized Light & Dark Theme */
+.about-dropdown-menu {
+  animation: dropdownFadeIn 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+[role="menu"].about-dropdown-menu {
+  background: rgba(255, 255, 255, 0.96) !important;
+  border: 1px solid #C5E1C1 !important;
+  backdrop-filter: blur(16px) saturate(140%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(140%) !important;
+  box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.12), 0 4px 12px -2px rgba(0, 0, 0, 0.06), inset 0 1px 1px 0 rgba(255, 255, 255, 0.8) !important;
+}
+
+html.dark [role="menu"].about-dropdown-menu {
+  background: linear-gradient(160deg, rgba(20, 36, 23, 0.96) 0%, rgba(13, 24, 15, 0.97) 100%) !important;
+  border: 1px solid rgba(74, 222, 128, 0.32) !important;
+  backdrop-filter: blur(16px) saturate(140%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(140%) !important;
+  box-shadow: 0 20px 40px -8px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(74, 222, 128, 0.12), inset 0 1px 1px 0 rgba(134, 239, 172, 0.25) !important;
+}
+
+.about-dropdown-item {
+  background-color: transparent !important;
+  color: #334155 !important;
+  transition: all 0.15s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.about-dropdown-item:hover {
+  background-color: #EAF5E9 !important;
+  color: #1B4D3E !important;
+}
+
+.about-dropdown-item.is-active-item {
+  background-color: rgba(197, 225, 193, 0.7) !important;
+  color: #1B4D3E !important;
+  font-weight: 600 !important;
+}
+
+html.dark .about-dropdown-item {
+  background-color: transparent !important;
+  color: #e2e8f0 !important;
+}
+
+html.dark .about-dropdown-item:hover {
+  background-color: rgba(74, 222, 128, 0.16) !important;
+  color: #86efac !important;
+}
+
+html.dark .about-dropdown-item.is-active-item {
+  background-color: rgba(74, 222, 128, 0.22) !important;
+  color: #4ade80 !important;
+  font-weight: 600 !important;
+  box-shadow: 0 0 10px rgba(74, 222, 128, 0.15) !important;
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+html.dark .animate-modal-content {
+  background-color: #0f1911 !important;
+  border-color: rgba(74, 222, 128, 0.24) !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.85) !important;
+}
+
+/* Obsidian Custom Scrollbars */
+html.dark ::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #080e09;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #1c301f;
+  border-radius: 9999px;
+  border: 2px solid #080e09;
+}
+
+html.dark ::-webkit-scrollbar-thumb:hover {
+  background: #28472d;
+}

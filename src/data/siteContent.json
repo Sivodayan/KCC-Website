@@ -1,0 +1,480 @@
+{
+  "hero": {
+    "title": "J/Kopay Christian College ",
+    "tamilTitle": "யா/ கோப்பாய் கிறிஸ்தவ கல்லூரி",
+    "subtitle": "A well-established mixed school in Kopay, Jaffna, dedicated to delivering holistic secondary and collegiate education.",
+    "image": "/assets/hero.jpg",
+    "buttonText": "Explore History ",
+    "buttonAction": "history"
+  },
+  "principles": {
+    "motto": {
+      "english": "\"Truth and Justice\"",
+      "tamil": "“உண்மைக்கும் நேர்மைக்கும்”",
+      "description": "Standing firm in unwavering truth and moral justice since 1852."
+    },
+    "vision": {
+      "english": "\"The Ideal School in Peninsula\"",
+      "tamil": "“குடாநாட்டின் முன்மாதிரிப் பாடசாலை”",
+      "description": "The Ideal School in Peninsula · குடாநாட்டின் முன்மாதிரிப் பாடசாலை"
+    },
+    "mission": {
+      "english": "To foster self respect, values, character, patriotism and Social Justice to lead the school community towards the global frontiers in education and to work for the optimum use of all the available resources skills and abilities.",
+      "tamil": "சுயமரியாதை, விழுமியங்கள், நடத்தைக் கோலங்கள், நாட்டுப்பற்று, சமூக நியாயப்பாடு என்பவற்றை உள்ளடக்கிப் பாடசாலை சமூகத்தை கல்வியிலும், கல்விசார் கடமைகளிலும், வளங்கள், தேர்ச்சிகள், மற்றும் திறமைகளைப் பயன்படுத்திப் பாடசாலையில் கல்வித்தரத்தை நாட்டின் முதல் வரிசைக்குக் கொண்டு வருதல்.",
+      "description": "To foster self respect, values, character, patriotism and Social Justice to lead the school community towards the global frontiers in education."
+    },
+    "customCards": [
+      {
+        "id": "pillar_1",
+        "titleEn": "Heritage & Discipline",
+        "titleTa": "பாரம்பரியமும் ஒழுக்கமும்",
+        "descEn": "Over 170 years of steadfast discipline, nurturing generations of exemplary citizens.",
+        "descTa": "170 ஆண்டுகளுக்கு மேற்பட்ட பாரம்பரிய ஒழுக்க நெறிமுறைகளுடன் முன்மாதிரி குடிமக்களை உருவாக்குகிறது.",
+        "badge": "Heritage"
+      }
+    ]
+  },
+  "performance": {
+    "title": "Key Numbers & Performance",
+    "subtitle": "Measurable records reflecting academic commitment, teacher mentorship, and co-curricular vibrancy.",
+    "founded": 1852,
+    "foundedLabel": "Founded Year",
+    "foundedSub": "Peninsula Heritage",
+    "foundedSuffix": "",
+    "students": 386,
+    "studentsLabel": "Enrolled Students",
+    "studentsSub": "Secondary to Collegiate",
+    "studentsSuffix": "+",
+    "staff": 46,
+    "staffLabel": "Teaching Staff",
+    "staffSub": "Dedicated Faculty",
+    "staffSuffix": "",
+    "olPass": 94.2,
+    "olPassLabel": "G.C.E. O/L Pass Rate",
+    "olPassSub": "National Examination",
+    "olPassSuffix": "%",
+    "grades": "6 – 13",
+    "gradesLabel": "School Grades",
+    "gradesSub": "Grades from 6 to 13",
+    "gradesSuffix": "",
+    "gradeMin": 6,
+    "gradeMax": 13,
+    "alQual": 78,
+    "alQualLabel": "University Qualifying",
+    "alQualSub": "G.C.E. A/L Streams",
+    "alQualSuffix": "%",
+    "clubs": 18,
+    "clubsLabel": "Clubs & Societies",
+    "clubsSub": "Co-Curricular Groups",
+    "clubsSuffix": "",
+    "houses": 4,
+    "housesLabel": "Competitive Houses",
+    "housesSub": "Annual Sports Division",
+    "housesSuffix": "",
+    "customStats": [
+      {
+        "id": "stat_smart_rooms",
+        "label": "Smart Classrooms",
+        "labelTa": "ஸ்மார்ட் வகுப்பறைகள்",
+        "value": 12,
+        "suffix": "+",
+        "description": "Equipped with interactive learning tools and high-speed multimedia."
+      },
+      {
+        "id": "stat_alumni",
+        "label": "Alumni Worldwide",
+        "labelTa": "உலகளாவிய பழைய மாணவர்கள்",
+        "value": 2500,
+        "suffix": "+",
+        "description": "Thriving global community supporting alma mater projects."
+      }
+    ],
+    "labs": 100
+  },
+  "gallery": [
+    {
+      "id": "gal_1",
+      "src": "/assets/gal_(1).jpeg",
+      "caption": "Historic College Entrance Archway",
+      "category": "Campus"
+    },
+    {
+      "id": "gal_2",
+      "src": "/assets/gal_(2).jpeg",
+      "caption": "Students Gathering at Morning Assembly",
+      "category": "Collegiate Life"
+    },
+    {
+      "id": "gal_3",
+      "src": "/assets/gal_(3).jpeg",
+      "caption": "Science & ICT Laboratory Exploration",
+      "category": "Academics"
+    },
+    {
+      "id": "gal_4",
+      "src": "/assets/gal_(4).jpeg",
+      "caption": "Inter-House Sports Meet Celebrations",
+      "category": "Sports"
+    },
+    {
+      "id": "gal_5",
+      "src": "/assets/gal_(5).jpeg",
+      "caption": "Campus Quadrangle & Historic Buildings",
+      "category": "Campus"
+    },
+    {
+      "id": "gal_6",
+      "src": "/assets/gal_(6).jpeg",
+      "caption": "College Library & Resource Center",
+      "category": "Academics"
+    },
+    {
+      "id": "gal_7",
+      "src": "/assets/gal_(7).jpeg",
+      "caption": "Annual Prize Giving Ceremony",
+      "category": "Events"
+    },
+    {
+      "id": "gal_8",
+      "src": "/assets/gal_(8).jpeg",
+      "caption": "Cultural & Arts Exhibition",
+      "category": "Culture"
+    },
+    {
+      "id": "gal_9",
+      "src": "/assets/gal_(9).jpeg",
+      "caption": "Track & Field Athletic Championship",
+      "category": "Sports"
+    },
+    {
+      "id": "gal_10",
+      "src": "/assets/gal_(10).jpeg",
+      "caption": "Teachers & Staff Faculty Members",
+      "category": "Collegiate Life"
+    },
+    {
+      "id": "gal_11",
+      "src": "/assets/gal_(11).jpeg",
+      "caption": "Green Campus Grounds & Gardens",
+      "category": "Campus"
+    }
+  ],
+  "events": [
+    {
+      "id": "post-1",
+      "postUrl": "https://www.facebook.com/permalink.php?story_fbid=pfbid025Pz66BiqSUp3qStpPS7snhUrd5ypBQ5fMPu3cc5dkwSGjQp4tY1FZp53NsuNzDtLl&id=61575442051109",
+      "iframeSrc": "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid025Pz66BiqSUp3qStpPS7snhUrd5ypBQ5fMPu3cc5dkwSGjQp4tY1FZp53NsuNzDtLl%26id%3D61575442051109&show_text=true&width=500",
+      "width": 500,
+      "height": 645
+    },
+    {
+      "id": "post-2",
+      "postUrl": "https://www.facebook.com/permalink.php?story_fbid=pfbid0334nHGppar4ii9kpwojTJrsZ8jzd5xRRev34az8mcgYavz3Ff72oKgHD838z3kdXQl&id=61575442051109",
+      "iframeSrc": "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0334nHGppar4ii9kpwojTJrsZ8jzd5xRRev34az8mcgYavz3Ff72oKgHD838z3kdXQl%26id%3D61575442051109&show_text=true&width=500",
+      "width": 500,
+      "height": 645
+    },
+    {
+      "id": "post-3",
+      "postUrl": "https://www.facebook.com/permalink.php?story_fbid=pfbid0Kwk57DhmTE8CLEy3kx3RKV3TmXmddPzucrS2udotnHufxLprRzWnSEQivjGxLTh6l&id=61575442051109",
+      "iframeSrc": "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid0Kwk57DhmTE8CLEy3kx3RKV3TmXmddPzucrS2udotnHufxLprRzWnSEQivjGxLTh6l%26id%3D61575442051109&show_text=true&width=500",
+      "width": 500,
+      "height": 645
+    },
+    {
+      "id": "post-4",
+      "postUrl": "https://www.facebook.com/permalink.php?story_fbid=pfbid02hbf8TSciS8MnviyQxDAWyBASJcQ97nj96nR7FmYBvKqYYaYYjeHzG4uADevDkAv7l&id=61575442051109",
+      "iframeSrc": "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02hbf8TSciS8MnviyQxDAWyBASJcQ97nj96nR7FmYBvKqYYaYYjeHzG4uADevDkAv7l%26id%3D61575442051109&show_text=true&width=500",
+      "width": 500,
+      "height": 645
+    },
+    {
+      "id": "post-5",
+      "postUrl": "https://www.facebook.com/permalink.php?story_fbid=pfbid02zujdxmeds1hkqvEgQ2929f2aav9hZ5mSD7dKE17PFFMerBQ5DjAJVTuP73iJGinTl&id=61575442051109",
+      "iframeSrc": "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02zujdxmeds1hkqvEgQ2929f2aav9hZ5mSD7dKE17PFFMerBQ5DjAJVTuP73iJGinTl%26id%3D61575442051109&show_text=true&width=500",
+      "width": 500,
+      "height": 645
+    },
+    {
+      "id": "post-6",
+      "postUrl": "https://www.facebook.com/permalink.php?story_fbid=pfbid02xD25dwc3eikVr9poQLQ7NreZDWWzkiFcPbFJGjAaw8GeFGtNXHjpkPDPwj8bRx81l&id=61575442051109",
+      "iframeSrc": "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02xD25dwc3eikVr9poQLQ7NreZDWWzkiFcPbFJGjAaw8GeFGtNXHjpkPDPwj8bRx81l%26id%3D61575442051109&show_text=true&width=500",
+      "width": 500,
+      "height": 645
+    }
+  ],
+  "contact": {
+    "address": "J/Kopay Christian College, Kopay, Jaffna, Sri Lanka",
+    "phone": "021 223 0040",
+    "officeHours": "Mon – Fri, 8:00 AM – 1:30 PM",
+    "email": "kcckopay@gmail.com",
+    "mapsUrl": "https://maps.app.goo.gl/UMsXzzu46QNMNwcB8",
+    "facebookUrl": "https://www.facebook.com/profile.php?id=61575442051109",
+    "instagramUrl": "https://www.instagram.com/explore/tags/kopaychristiancollege/",
+    "collegeName": "J/Kopay Christian College",
+    "tamilName": "யா/ கோப்பாய் கிறிஸ்தவ கல்லூரி",
+    "secondaryPhone": "+94 21 223 0040"
+  },
+  "meta": {
+    "schoolName": "J/Kopay Christian College",
+    "tamilName": "யா/ கோப்பாய் கிறிஸ்தவ கல்லூரி",
+    "foundedYear": "1852",
+    "motto": "Truth and Justice",
+    "tamilMotto": "உண்மைக்கும் நேர்மைக்கும்"
+  },
+  "announcement": {
+    "enabled": false,
+    "badge": "Admissions 2026-2027",
+    "text": "Applications are now open for collegiate G.C.E. A/L Science, Commerce, and Arts streams.",
+    "tamil": "க.பொ.த உயர்தர வகுப்புக்களுக்கான மாணவர் அனுமதி விண்ணப்பங்கள் கோரப்படுகின்றன.",
+    "link": "#contact",
+    "linkText": "Contact Office →",
+    "type": "info"
+  },
+  "anthem": {
+    "title": "School Anthem",
+    "tamilTitle": "பாடசாலைக் கீதம்",
+    "ragam": "Hamsadhwani (ஹம்சத்வனி)",
+    "composer": "Composed with collegiate pride and devotion",
+    "audioUrl": "",
+    "versesTamil": [
+      "வாழ்க வாழ்க வாழ்கவே - எங்கள்\nகோப்பாய் கிறிஸ்தவ கல்லூரி வாழ்கவே!",
+      "உண்மை நேர்மை நெறியிலே - என்றும்\nஒளிரும் அறிவின் ஜோதியாய்",
+      "கலைகள் யாவும் பயின்று நாம் - உயர்\nகருணை அன்பில் திளைக்கவே",
+      "இலங்கை நாடும் போற்றிட - இறையருளால்\nஇணையிலாது திகழவே வாழ்கவே!"
+    ],
+    "translationEn": "Long live our beloved Kopay Christian College, shining as a sacred beacon of truth and justice in Kopay, Jaffna."
+  },
+  "history": {
+    "overview": {
+      "titleEn": "CMS English School & Today’s Christian College",
+      "titleTa": "CMS ஆங்கிலப் பாடசாலையும் இன்றைய கிறிஸ்தவ கல்லூரியும்",
+      "authorsEn": "Rev. J. S. Ratnathikkam & Rev. A. M. Nathaniel",
+      "authorsTa": "வண. J. S. இரட்ணாதிக்கம் & வண. A. M. நத்தானியல்",
+      "leadEn": "An archival chronology tracing foundational origins from 1849 through collegiate unification and the modern era.",
+      "leadTa": "1849 முதல் இன்றைய கல்லூரி வரையிலான வரலாற்றுத் தடங்களின் ஆவணத் தொகுப்பு."
+    },
+    "milestones": [
+      {
+        "id": "his-1",
+        "year": "1849–1850",
+        "yearTa": "1849–1850",
+        "titleEn": "Founding of the Girls' School",
+        "titleTa": "பெண்களுக்கான ஆங்கிலப் பாடசாலை தோற்றம்",
+        "descEn": "This institution was originally founded for young girls in 1850 by Mrs. Bren. An excerpt from the 1850 inspection report by the Secretary of the Ceylon Central Committee notes missionary beginnings under Rev. Robert Bren.",
+        "descTa": "இப்பாடசாலை முதன் முதலில் 1850ல் திருமதி பிறென் அவர்களால் பெண்களுக்கென ஆரம்பிக்கப்பட்டது என அறியக் கிடக்கிறது. இலங்கை மத்திய குழுச் செயலாளரின் 1850ம் ஆண்டு வருகைக் குறிப்பில் பின்வருமாறு குறிப்பிடப்பட்டுள்ளது:",
+        "quoteEn": "“The missionary now at this station, Rev. Robert Bren, arrived here in November 1849 accompanied by Mrs. Bren. At present, a church and a parsonage are under construction. I wish to make mention of an English school for girls founded and conducted by Mrs. Bren. 36 girls are studying here. I inspected the Tamil and English schools in this area on Friday the 27th. The English schools stand superior to the vernacular Tamil schools.”",
+        "quoteTa": "“இப்பொழுது இந்த நிலையத்திலுள்ள மிஷனறி Rev. Robert Bren அவர்களின் துணைவியார் திருமதி பிறென் அவர்களுடன் 1849ம் ஆண்டு, நவம்பர் மாதம் இங்கு வருகை தந்தனர். தற்பொழுது ஒரு தேவாலயமும், குருமனை ஒன்றும் கட்டப்பட்டுக் கொண்டிருக்கிறது. இங்கு திருமதி பிறென் அவர்களால் ஆரம்பிக்கப்பட்டு நடைபெற்றுக் கொண்டிருக்கும் பெண்களுக்கான ஆங்கிலப் பாடசாலை ஒன்று தொடர்பாகக் குறிப்பிட விரும்புகிறேன். இங்கு 36 பெண்கள் படித்துக் கொண்டிருக்கிறார்கள். நான் இப்பிரதேசத்திலுள்ள தமிழ், ஆங்கிலப் பாடசாலைகளை 27ம் திகதி வெள்ளிக்கிழமை பரிசோதித்தேன். தமிழ்ப் பாடசாலைகளைவிட, ஆங்கிலப் பாடசாலைகள் மேலோங்கினவாக உள்ளன.”",
+        "image": "/assets/his1.jpg",
+        "imageAlt": "வரலாற்றுப் பின்னணி - Historical Foundations"
+      },
+      {
+        "id": "his-2",
+        "year": "1852–1928",
+        "yearTa": "1852–1928",
+        "titleEn": "CMS Takeover & St. John's Management Board",
+        "titleTa": "CMS பொறுப்பேற்பும் பரி. யோவான் முகாமைத்துவமும்",
+        "descEn": "Having functioned within church premises until then, the school was formally taken over by CMS missionaries in 1852 and commenced operations in a newly constructed building. With a predominantly male student body, it evolved as the premier institution imparting English-medium education across the Kopay region. Administered independently under the parish priest until 1899, it was subsequently placed under the governance of the St. John's College Management Board. Classes were conducted up to E.S.L.C. After 1928, female students were admitted into Grades 4 and 5 beyond Grade 3.",
+        "descTa": "இதுவரை தேவாலய வளாகத்தில் இயங்கிய இப்பாடசாலை 1852ல் CMS மிஷனறிமாரால் பொறுப்பேற்கப்பட்டுப் புதிய கட்டிடத்தில் இயங்கத் தொடங்கியது. ஆண்களைப் பெரும்பான்மையினராகக் கொண்ட இப்பாடசாலை, கோப்பாய்ப் பிரதேசத்தில் ஆங்கிலமொழி மூலம் கல்வி வழங்கும் நிறுவனமாகப் பரிணமித்தது. 1899ம் ஆண்டுவரை தேவாலயக் குருவானவரின் மேற்பார்வையின் கீழே தனித்துவமாக இயங்கிய இப்பாடசாலை பரி. யோவான் கல்லூரி முகாமைத்துவ சபையின் பரிபாலனத்தின் கீழே கொண்டுவரப்பட்டு, அச்சபையினாலே நிர்வகிக்கப்பட்டு வந்தது. E.S.L.C வரை வகுப்புகள் நடத்தப்பட்டு வந்தன. 1928க்குப் பின்னர், தரம் IIIக்கு மேலே 4-5 வரை பெண்கள் அனுமதிக்கப்பட்டனர்.",
+        "quoteEn": "",
+        "quoteTa": "",
+        "image": "/assets/his2.jpg",
+        "imageAlt": "CMS கட்டமைப்பு - CMS Structure"
+      },
+      {
+        "id": "his-3",
+        "year": "1939–1945",
+        "yearTa": "1939–1945",
+        "titleEn": "Kopay Christian College Renaming",
+        "titleTa": "கோப்பாய் கிறிஸ்தவ கல்லூரி என்று பெயர் மாற்றம்",
+        "descEn": "In 1939, following the assumption of headmastership by the late Mr. G. S. Chelliah, classes were expanded sequentially, and students were presented for S.S.C examinations starting from 1940. In 1945, the school was unified with the girls' boarding school on the same premises and formally renamed Kopay Christian College. Mr. G. S. Chelliah served as Principal alongside Miss M. V. Hutchins as Vice Principal. Boys' hostels initially located off-campus were later established in Wadsworth Hall.",
+        "descTa": "1939ல் அமரர் G. S. செல்லையா அவர்கள் தலைமை ஆசிரியராகப் பொறுப்பேற்ற பின்னர் வகுப்புகள் படிப்படியாக அதிகரிக்கப்பட்டு 1940ல் இருந்து S.S.C பரீட்சைக்குத் தோற்ற மாணவர் அனுமதிக்கப்பட்டனர். 1945ல் ஒரே வளாகத்தில் இயங்கிய பெண்கள் விடுதிப் பாடசாலையுடன் ஒன்றிணைக்கப்பட்டு கோப்பாய் கிறிஸ்தவ கல்லூரி என்று பெயர் மாற்றம் பெற்று இயங்கத் தொடங்கியது. திரு. G. S. செல்லையா அதிபராகவும் செல்வி M. V. ஹட்சின்ஸ் உப அதிபராகவும் பணியாற்றலாயினர். ஆண்களுக்கான விடுதிகள் ஆரம்ப காலத்தில் பாடசாலைக்கு வெளியே அமைக்கப்பட்டபோதும் காலப்போக்கில் வேட்ஸ்வேத் மண்டபத்தில் அவை அமைக்கப்பட்டன.",
+        "quoteEn": "",
+        "quoteTa": "",
+        "image": "/assets/his3.jpg",
+        "imageAlt": "பெயர் மாற்றம் - College Renaming"
+      },
+      {
+        "id": "his-4",
+        "year": "Traditions",
+        "yearTa": "நிதி & பாரம்பரியம்",
+        "titleEn": "The Annual \"Sale\" & Early Athletics",
+        "titleTa": "ஆண்டுச் சந்தையும் (Sale) ஆரம்ப விளையாட்டுக்களும்",
+        "descEn": "The college operated through state grants, student fees, and funds raised during signature institutional events. The annual \"Sale\" featured student produce and goods manufactured in industrial workshops, channelled directly toward operational needs. Football and netball formed the athletics foundation.",
+        "descTa": "இப்பாடசாலை அரசு மானிய உதவி, மாணவர்களிடம் பெறப்பட்ட கட்டணம் மற்றும் நிகழ்ச்சிகளில் சேகரிக்கப்பட்ட நிதி என்பவற்றைக் கொண்டு செயற்பட்டு வந்தது. ஆண்டு தோறும் நடத்தப்பட்ட “சந்தை”யில் (Sale) மாணவர்கள் கொண்டுவரும் உற்பத்திகள், கைத்தொழிற் பாடசாலையில் உற்பத்தி செய்யப்பட்ட பொருட்கள் என்பன விற்பனை செய்யப்பட்டு, இவற்றின் மூலம் பெறப்படும் நிதியும் பாடசாலைச் செயற்பாடுகளுக்கே பயன்படுத்தப்பட்டது. இவர் காலத்தில் விளையாட்டுத் துறையைப் பொறுத்தவரை காற்பந்தாட்டமும் வலைப்பந்தாட்டமுமே காணப்பட்டன. மாணவர்கள் இல்லங்களாகப் பிரிக்கப்பட்டபோதும், மைதான வசதியின்மையால் பெரிய அளவிலான விளையாட்டுப் போட்டிகள் நடைபெற்றதாக அறியப்படவில்லை. சிறுவருக்கான விளையாட்டுக்கள் மாத்திரமே இடம் பெற்று வந்துள்ளன.",
+        "quoteEn": "",
+        "quoteTa": "",
+        "image": "/assets/his4.jpg",
+        "imageAlt": "கைத்தொழில் மற்றும் சந்தை - Industry & Annual Sale"
+      },
+      {
+        "id": "his-5",
+        "year": "Rajasekaram",
+        "yearTa": "இராஜசேகரம்",
+        "titleEn": "The \"Mile Race\" & Formal Uniforms",
+        "titleTa": "“மைல்றேஸ்”, சீருடை & மனையியற்கூடம்",
+        "descEn": "During the principalship of Mr. A. W. Rajasekaram, sports meets were conducted on leased grounds near the current Kopay Government Hospital, highlighted by the prestigious annual \"Mile Race\" championing the collegiate \"Miler.\" Uniform codes were introduced and the Home Economics lab was founded.",
+        "descTa": "அமரர் A. W. இராஜசேகரம் அதிபர் காலத்தில், தற்பொழுது கோப்பாய் அரசினர் வைத்தியசாலை அமைந்துள்ள இடத்துக்கு அண்மையில் ஒரு காணி குத்தகைக்குப் பெறப்பட்டு, அதிலே விளையாட்டுப் போட்டிகள் நடாத்தப்பட்டன. இப்போட்டிகளின் பிரதான அம்சமாக “மைல்றேஸ்” இடம்பெற்று வந்ததெனவும், வருடாந்தம் அதில் வெற்றி பெறுபவர் “மைலர்” என்று அழைக்கப்பட்டு வந்தார் எனவும் கூறப்படுகிறது. மாணவர் சீருடை அணியும் வழக்கம் ஏற்படுத்தப்பட்டிருந்தது. இதற்கமையச் சிறுவர்கள் காற்சட்டை ஷேர்ட்டும், வயது வந்த ஆண்கள் வேட்டி ஷேர்ட்டும், பெண்பிள்ளைகள் சிறுமிகள் சட்டையும், வயது வந்த பெண்கள் சேலை, சட்டையும் அணிந்தனர். இந்த அதிபரின் காலத்திலேயே தற்போதுள்ள மனையியற்கூடம் அமைக்கப்பட்டது.",
+        "quoteEn": "",
+        "quoteTa": "",
+        "image": "/assets/his5.jpg",
+        "imageAlt": "சீருடை மற்றும் போட்டிகள் - Uniforms & Athletics"
+      },
+      {
+        "id": "his-6",
+        "year": "Navaratnarajah",
+        "yearTa": "நவரத்தினராஜா",
+        "titleEn": "Multi-Disciplinary Growth & School Grounds",
+        "titleTa": "அனைத்துத் துறை விஸ்தரிப்பும் தேசிய மட்டமும்",
+        "descEn": "Under the leadership of Mr. E. C. A. Navaratnarajah, comprehensive multi-disciplinary advancement took place. The Packiyam Williams staff quarters and Hutchins Hall were erected. Grounds were enlarged, introducing hockey and basketball, competing vigorously at national tournaments.",
+        "descTa": "அமரர், E. C. A. நவரத்தினராஜா அதிபர் பாடசாலையைப் பொறுப்பேற்று நடாத்தி வந்த காலத்தில் அனைத்துத் துறைகளிலும் பாடசாலை அபிவிருத்தியடைந்தது. ஆசிரியர் தங்கும் அறையாகிய “பாக்கியம் வில்லியம்ஸ் கட்டிடம், ஹட்சின்ஸ் மண்டபம்” ஆகியவை அமைக்கப்பட்டன. பாடசாலையின் விளையாட்டு மைதானம் விஸ்தரிக்கப்பட்டு அதில் விளையாட்டுப் போட்டிகள் நடாத்தப்படலாயின. ஹொக்கி, கூடைப்பந்து, உதைபந்து முதலிய விளையாட்டுக்கள் இங்கு அறிமுகப்படுத்தப்பட்டன. ஹொக்கி, கூடைப்பந்து, காற்பந்து, வலைப்பந்து ஆகிய விளையாட்டுக் குழுக்கள், தேசிய மட்ட நிகழ்வுகளில் பங்கு கொள்ளக் கூடிய அளவுக்கு முன்னேற்றம் பெற்று விளங்கின.",
+        "quoteEn": "",
+        "quoteTa": "",
+        "image": "/assets/his6.jpg",
+        "imageAlt": "பாக்கியம் வில்லியம்ஸ் கட்டிடம் - Navaratnarajah Era"
+      },
+      {
+        "id": "his-7",
+        "year": "Shanmuganathan",
+        "yearTa": "சண்முகநாதன்",
+        "titleEn": "Shanmuganathan Hall & Co-op Societies",
+        "titleTa": "சண்முகநாதன் மண்டபம் & கூட்டுறவுச் சங்கங்கள்",
+        "descEn": "During Principal E. K. Shanmuganathan's tenure, the southern hall now designated Shanmuganathan Hall was constructed. Student co-operative societies, teachers' thrift co-operatives, and the Navaratnarajah Memorial Fund were formally instituted.",
+        "descTa": "அமரர் E. K. சண்முகநாதன் அதிபரின் காலப்பகுதியில் வடக்குப்பக்கமாக அமைந்திருந்த பாதை மூடப்பட்டது. தற்போது சண்முகநாதன் மண்டபம் எனப்பெயரிடப்பட்டுள்ள தெற்குப்புற மண்டபம் அமைக்கப்பட்டது. ஆசிரியர் அறைக்கு இணைந்த மலசலகூடம் அமைக்கப்பட்டது. மாணவர் கூட்டுறவுச் சங்கம், ஆசிரியர் சிக்கனக் கூட்டுறவுச் சங்கம் “நவரத்தினராஜா ஞாபகார்த்த நிதியம்” என்பவை ஆரம்பிக்கப்பட்டன.",
+        "quoteEn": "",
+        "quoteTa": "",
+        "image": "/assets/his7.jpg",
+        "imageAlt": "சண்முகநாதன் மண்டபம் - Shanmuganathan Hall"
+      },
+      {
+        "id": "his-8",
+        "year": "Kanthasamy & Sivanesan",
+        "yearTa": "கந்தசாமி & சிவநேசன்",
+        "titleEn": "Chelliah Hall & 125th Jubilee Memorial Hall",
+        "titleTa": "செல்லையா மண்டபம் & 125ஆவது ஆண்டு நினைவு மண்டபம்",
+        "descEn": "Under Principal S. Kanthasamy, Chelliah Hall and ground-floor works for Navaratnarajah Hall were executed, bolstering laboratory infrastructure. Principal C. Sivanesan completed the upper levels, erected the 125th Anniversary Memorial Hall, boundary walls, and two additional classrooms.",
+        "descTa": "திரு. S. கந்தசாமி அதிபர் காலத்தில் செல்லையா மண்டபம் அமைக்கப்பட்டதுடன் நவரத்தினராஜா மண்டபத்தின் கீழ்த்தள வேலைகளும் மேற்கொள்ளப்பட்டன. இது விஞ்ஞானகூட வசதிகளை அதிகரித்தது. திரு. சி. சிவநேசன் அதிபர் காலப்பகுதியில் நவரத்தினராஜா மண்டப மேற்தள வேலைகள், அத்துடன் இணைந்த மலசலகூட வேலைகள், 125ஆவது நினைவு மண்டப அமைப்பு, தேவாலய எல்லை மதில் அமைப்பு ஆகிய வேலைகளும், சண்முகநாதன் மண்டபத்தில் மேலதிகமாக இரண்டு வகுப்பறைகளும் அமைக்கும் பணிகள் இடம்பெற்றன.",
+        "quoteEn": "",
+        "quoteTa": "",
+        "image": "/assets/his8.jpg",
+        "imageAlt": "125ஆவது நினைவு மண்டபம் - 125th Jubilee Hall"
+      },
+      {
+        "id": "his-9",
+        "year": "Policy Shift",
+        "yearTa": "மறுசீரமைப்பு",
+        "titleEn": "Phase-Out of Primary Grades & Non-Formal Education",
+        "titleTa": "ஆரம்பப்பிரிவு நீக்கமும் முறைசாராக் கல்வியும்",
+        "descEn": "Pursuant to governmental educational policy adjustments, primary classes were gradually discontinued year by year. Initiated under Mr. Kanthasamy, this concluded under Mr. Sivanesan. Mr. S. Selvaratnam commenced construction of the non-formal education units, completed by Mrs. P. Arulrajah.",
+        "descTa": "ஆரம்பகாலம் தொடக்கம் இப்பாடசாலையில் அமைந்திருந்த ஆரம்பப்பிரிவு வகுப்புகள் அக்கால அரசாங்கக் கொள்கைக்கு அமைய வருடாந்தம் ஒவ்வொரு வகுப்பாகப் படிப்படியாக நீக்கப்பட்டன. திரு. கந்தசாமி அதிபர் காலத்தில் ஆரம்பமான இச்செயற்பாடு திரு. சிவநேசன் காலத்தில் முடிவுற்றது. திரு. சிவநேசன் அவர்கள் மீண்டும் அந்த வகுப்புகளை ஏற்படுத்த முயன்றபோதும் திணைக்களம் அனுமதிக்கவில்லை. எனவே இங்கு கற்பவருக்கான அத்திவாரக்கல்வி இங்கேயே அமைவதில்லை. அமரர் திரு. S. செல்வரத்தினம் அதிபர் காலத்தில் முன்னைய அதிபரால் ஆரம்பிக்கப்பட்ட சில கட்டிட வேலைகள் பூரணப்படுத்தப்பட்டதுடன், முறைசாராக் கல்விக்கான கட்டிடப் பகுதி அமைக்கும் வேலைகளும் ஆரம்பிக்கப்பட்டன. திருமதி P. அருள்ராஜா அவர்கள் காலத்தில் அவை பூரணப்படுத்தப்பட்டன.",
+        "quoteEn": "",
+        "quoteTa": "",
+        "image": "/assets/his9.jpg",
+        "imageAlt": "பாடசாலை மறுசீரமைப்பு - Restructuring & Policy Shift"
+      },
+      {
+        "id": "his-10",
+        "year": "Rebuilding",
+        "yearTa": "சவால்கள் & மீட்சி",
+        "titleEn": "Commerce Streams, ADB Support & Endowments",
+        "titleTa": "உ/த வர்த்தகம், ADB செயற்திட்டம் & வைப்புக்கள்",
+        "descEn": "Under Mr. P. K. Rajaratnam, G.C.E. Advanced Level Commerce streams were inaugurated. Despite wartime dislocations, ten classrooms and water reserves were erected via Asian Development Bank aid. Under Mr. T. Muthukumaraswamy, infrastructure was fortified and permanent bank endowments were founded through alumni and development bodies.",
+        "descTa": "திரு. P. K. இராஜரத்தினம் அதிபர் காலத்தில் க.பொ.த. (உ/த) வர்த்தகப் பிரிவு வகுப்புகள் ஆரம்பிக்கப்பட்டன. இந்திய இராணுவ நடவடிக்கை காரணமாகப் பாடசாலைச் சொத்துக்கள் களவு போயின. மூன்றாம் காலப் பகுதியில் பாடசாலை மூடப்பட்டுத் தற்காலிகமாக யா/ கோப்பாய் நாவலர் வித்தியாலயத்தில் இயங்கியது. ஆசிய அபிவிருத்தி வங்கியின் உதவியுடன் 10 வகுப்பறைகளுக்கான கட்டிடத்தொகுதி ஒன்றும், நீர்த்தாங்கி ஒன்றும் அமைக்கும் பணிகள் ஆரம்பிக்கப்பட்டன. திரு. T. முத்துக்குமாரசுவாமி அதிபர் காலத்தில் அலுவலகம் பாக்கியம் வில்லியம்ஸ் கட்டிடத்துக்கு மாற்றப்பட்டது. குழாய்க்கிணறு ஒன்று அமைக்கப்பட்டது. பாடசாலை எல்லைகள் பாதுகாப்பான முறையில் பேணப்பட்டன. பழைய கட்டிடங்கள் இடித்து அழிக்கப்பட்டன. அவற்றின் உதவியுடன் தற்காலிக வகுப்பறைகள், சைக்கிள் கொட்டகை ஆகியவை அமைக்கப்பட்டன. பாடசாலை உட்புற வீதி செப்பனிடப்பட்டது. பாடசாலைச் செயற்பாடுகளுக்கு உதவும் வகையில் வங்கிகளில் நிரந்தர வைப்புக் கணக்குகள் பல ஆரம்பிக்கப்பட்டன. பழைய மாணவர் சங்கம், பாடசாலை அபிவிருத்திச் சங்கம், தமிழ்ச் சங்கம் ஆகியவற்றுக்கு ஊடாகவே இக்கணக்கு வைப்புகள் பேணப்படலாயின.",
+        "quoteEn": "",
+        "quoteTa": "",
+        "image": "/assets/his10.jpg",
+        "imageAlt": "புனரமைப்பு மற்றும் கட்டிடங்கள் - Rebuilding & Infrastructure"
+      },
+      {
+        "id": "his-11",
+        "year": "Modern Era",
+        "yearTa": "சிவகடாட்சம்",
+        "titleEn": "Modern Infrastructure, Halls & University Entrants",
+        "titleTa": "புதிய மண்டபங்கள், மைதானங்கள் & கல்வி அபிவிருத்தி",
+        "descEn": "Under Principal N. Sivakadadcham, Karthigesan Hall, Rajasekaram Hall, and Sivasubramaniam Hall were erected alongside multi-faith prayer sanctuaries, basketball, netball, and football grounds. Students secured university admissions to Peradeniya and Moratuwa Engineering, and Jaffna Medicine and Management.",
+        "descTa": "இன்றைய அதிபர் திரு. ந. சிவகடாட்சம் அவர்களின் காலத்தில் கார்த்திகேசன் மண்டபம், இராஜசேகரம் மண்டபம், சிவசுப்பிரமணியம் மண்டபம் ஆகியவையும், இந்து, கிறிஸ்தவ பிரார்த்தனை மண்டபங்கள், கூடைப்பந்து, வலைப்பந்து, காற்பந்தாட்ட மைதானங்கள் என்பவையும் புதிதாக அமைக்கப்பட்டன. புதிதாக மலசலகூடங்கள் அமைக்கப்பட்டன. 125ம் ஆண்டு நினைவு மண்டபம், நவரத்தினராஜா மண்டபம், தண்ணீர்த் தாங்கி என்பவை திருத்தப்பட்டு பல அபிவிருத்திப் பணிகள் மேற்கொள்ளப்பட்டுள்ளன. கல்வி அபிவிருத்திப் பணிகளும் குறிப்பிடத்தக்கவையாக உள்ளன. அமரர் E. C. A. நவரத்தினராஜா அதிபர் காலத்தில் தொடங்கிய பல்கலைக் கழகப் பிரவேசம் தொடர்ந்து வளர்ந்து வருகின்றது. இன்று பேராதனை, மொறட்டுவ பல்கலைக்கழகங்களுக்குப் பொறியியல் பிரிவு மாணவர்கள் அனுமதிக்கப்பட்டுள்ளனர். யாழ்ப்பாணப் பல்கலைக்கழகத்தில் மருத்துவம், முகாமைத்துவம், வணிகம், விஞ்ஞானம், கலை ஆகிய பிரிவுகளுக்கும், நுண்கலைக் கல்லூரியில் சங்கீதம், நடனம் ஆகிய பிரிவுகளுக்கும் எமது மாணவர் அனுமதி பெற்றுப் படித்து வருவது கல்லூரிக்குப் பெருமை சேர்ப்பதாக உள்ளது.",
+        "quoteEn": "",
+        "quoteTa": "",
+        "image": "/assets/his11.jpg",
+        "imageAlt": "பல்கலைக்கழக சாதனையாளர்கள் - University Entrants & Modern Halls"
+      },
+      {
+        "id": "his-12",
+        "year": "150th Year",
+        "yearTa": "150ஆவது ஆண்டு",
+        "titleEn": "150th Anniversary, Sports & Renaissance",
+        "titleTa": "விளையாட்டுத் துறையும் 150ஆவது ஆண்டு நிறைவும்",
+        "descEn": "Athletics reached national benchmarks, with students qualifying for national finals. Through generous patronage by the alumni association, Colombo and overseas branches, and school development committees, modern classroom complexes and technological amenities celebrate over 150 years of collegiate pride.",
+        "descTa": "விளையாட்டுத்துறையும் நன்கு அபிவிருத்தி பெற்று வருகின்றது. எமது மாணவர்கள் தேசிய மட்டப் போட்டிகளில் பங்கேற்கும் தகைமை பெற்றமை சிறப்பாகக் குறிப்பிடத்தக்கதாகும். தற்காலிக வகுப்பறைக் கட்டிடங்களும், பற்றாக்குறையான தளபாடங்களும் மாணவரின் கற்றல், செயற்பாடுகளுக்குச் சாதகமாயில்லாத சூழ்நிலையிலும் கூட, அதிபர் ஆசிரியர்களின் ஊக்குவிப்புகளும் மாணவர் ஆர்வமும் கல்லூரியை முன்னேற்றி வருகின்றன. அரச, அரச சார்பற்ற நிறுவனங்கள், பழைய மாணவர் சங்கமும் அதன் கொழும்பு மற்றும் வெளிநாட்டுக் கிளைகள் ஆகியவையும், பாடசாலை அபிவிருத்திச் சங்கம் என்பனவும் மற்றும் நலன்விரும்பிகளும் பெரிதும் உதவியதால் இன்று கட்டிடப் பற்றாக்குறையும், தளபாடப் பற்றாக்குறையும் ஓரளவு நிவர்த்தி பெற்று வருதல் மகிழ்ச்சிக்குரியது. கல்லூரியின் வளர்ச்சிப் பாதையில் 150ஆவது ஆண்டு முக்கியமானதொரு மைல் கல் எனக் குறிப்பிடலாம்.",
+        "quoteEn": "",
+        "quoteTa": "",
+        "image": "/assets/his12.jpg",
+        "imageAlt": "150ஆவது ஆண்டு விழாச்சபை - 150th Anniversary Milestone"
+      }
+    ],
+    "headmasters": [
+      {
+        "id": "hm-1",
+        "period": "1880",
+        "name": "Mr. Valippillai (Later R. V. Vathavanam)"
+      },
+      {
+        "id": "hm-2",
+        "period": "1909 - 1914",
+        "name": "Rev. I. S. Ratnathikkam"
+      },
+      {
+        "id": "hm-3",
+        "period": "1917 - 1920",
+        "name": "Rev. A. M. Nathaniel"
+      },
+      {
+        "id": "hm-4",
+        "period": "1924 - 1926",
+        "name": "Rev. I. S. Ratnathikkam"
+      },
+      {
+        "id": "hm-5",
+        "period": "1926 - 1938",
+        "name": "Mr. J. P. Chelliah"
+      },
+      {
+        "id": "hm-6",
+        "period": "1939 - 1944",
+        "name": "Mr. G. S. Chelliah"
+      }
+    ],
+    "managers": [
+      {
+        "id": "m-1",
+        "period": "1899 - 1900",
+        "name": "Rev. R. W. Ryde"
+      },
+      {
+        "id": "m-2",
+        "period": "1900 - 1919",
+        "name": "Rev. J. Thompson"
+      },
+      {
+        "id": "m-3",
+        "period": "1919",
+        "name": "Rev. K. C. McPherson"
+      },
+      {
+        "id": "m-4",
+        "period": "1920 - 1940",
+        "name": "Rev. Henry Peto"
+      },
+      {
+        "id": "m-5",
+        "period": "1940 - 1957",
+        "name": "Rev. J. T. Arulanantham"
+      },
+      {
+        "id": "m-6",
+        "period": "1957 - 1960",
+        "name": "Mr. A. W. Rajasekaram"
+      }
+    ]
+  }
+}
