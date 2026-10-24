@@ -14,7 +14,7 @@ A high-performance, bilingual (English & Tamil) single-page web application and 
 ## 🌐 Live Application
 
 * **Production URL:** [https://jkcc.edu.lk/](https://jkcc.edu.lk/)
-* **Repository:** [https://github.com/Sivodayan/KCC-Web-Public](https://github.com/Sivodayan/KCC-Web-Public)
+* **Repository:** [https://github.com/Sivodayan/KCC-Website](https://github.com/Sivodayan/KCC-Website)
 
 ---
 
@@ -157,8 +157,8 @@ A high-performance, bilingual (English & Tamil) single-page web application and 
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/Sivodayan/KCC-Web-Public.git
-   cd KCC-Web-Public
+   git clone https://github.com/Sivodayan/KCC-Website.git
+   cd KCC-Website
    ```
 
 2. **Install project dependencies:**

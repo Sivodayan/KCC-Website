@@ -122,7 +122,7 @@ export async function onRequestGet(context) {
   return new Response(
     JSON.stringify({
       configured: isConfigured,
-      targetRepo: 'Sivodayan/KCC-Web-Public',
+      targetRepo: 'Sivodayan/KCC-Website',
       branch: 'main',
       hasToken: isConfigured,
       checkedAt: new Date().toISOString()
@@ -180,7 +180,7 @@ export async function onRequestPost(context) {
 
   const {
     owner = 'Sivodayan',
-    repo = 'KCC-Web-Public',
+    repo = 'KCC-Website',
     path = 'src/data/siteContent.json',
     branch = 'main',
     contentString,
@@ -201,7 +201,7 @@ export async function onRequestPost(context) {
   }
 
   // Security whitelist: Restrict commits to designated repository and content directory
-  if (owner !== 'Sivodayan' || repo !== 'KCC-Web-Public') {
+  if (owner !== 'Sivodayan' || repo !== 'KCC-Website') {
     return new Response(
       JSON.stringify({ error: 'Unauthorized repository target.' }),
       {

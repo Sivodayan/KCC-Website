@@ -138,7 +138,7 @@ export async function fetchFileFromGitHub({ owner, repo, path, branch = 'main', 
  *
  * @param {Object} params
  * @param {string} [params.owner='Sivodayan'] - Repository owner.
- * @param {string} [params.repo='KCC-Web-Public'] - Repository name.
+ * @param {string} [params.repo='KCC-Website'] - Repository name.
  * @param {string} [params.path='src/data/siteContent.json'] - Target file path.
  * @param {string} [params.branch='main'] - Target branch.
  * @param {string} params.token - GitHub PAT with repo scope.
@@ -207,7 +207,7 @@ export async function checkGitHubProxyStatus() {
  *
  * @param {Object} params
  * @param {string} [params.owner='Sivodayan'] - Repository owner.
- * @param {string} [params.repo='KCC-Web-Public'] - Repository name.
+ * @param {string} [params.repo='KCC-Website'] - Repository name.
  * @param {string} [params.path='src/data/siteContent.json'] - Target file path.
  * @param {string} [params.branch='main'] - Target branch.
  * @param {string} [params.token] - Optional local PAT for local dev fallback.
@@ -217,7 +217,7 @@ export async function checkGitHubProxyStatus() {
  */
 export async function commitFileToGitHub({
   owner = 'Sivodayan',
-  repo = 'KCC-Web-Public',
+  repo = 'KCC-Website',
   path = 'src/data/siteContent.json',
   branch = 'main',
   token,
