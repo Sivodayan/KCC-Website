@@ -1,4 +1,4 @@
-# KCC Web Portal — Modern Bilingual Web Application
+# KCC Web Portal - Modern Bilingual Web Application
 
 [![React 19](https://img.shields.io/badge/React-19.0-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
 [![Vite 6](https://img.shields.io/badge/Vite-6.2-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
